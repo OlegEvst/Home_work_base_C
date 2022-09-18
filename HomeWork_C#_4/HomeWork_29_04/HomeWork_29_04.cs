@@ -6,7 +6,7 @@ Console.WriteLine("Введите числа через ','");
 // Сообщение ввода двух чисел через запятую
 string[] array = Console.ReadLine().Split(new char[] { ',' });
 // Вводим через запятую элементы массива - это могут быть, как числа так и символы.
-void printArray(string[] numberArray)
+void PrintArray(string[] numberArray)
 // Метод, который переберает введёный массив и печатает элементы в консоль через заптую.
     {
     int count = numberArray.Length;
@@ -18,11 +18,11 @@ void printArray(string[] numberArray)
                 if(i == 0) Console.Write($"[{numberArray[i]},");
                 else if(i != count - 1) Console.Write($"{numberArray[i]},");
                 else Console.Write($"{numberArray[i]}]");
-                // Цикл переберает каждый элемет массива и в зависимости от значания ставит или не ставит запятую.
+                // Цикл перебирает каждый элемет массива и в зависимости от значения ставит или не ставит запятую.
             }
         }
         else Console.Write("Введите строго 8 элементов через запятую");
     }
 
-printArray(array);
+PrintArray(array);
 // Вызов метода.
