@@ -6,7 +6,7 @@
 
 Console.WriteLine("Введите размерность числового массива: ");
     int size = int.Parse(Console.ReadLine());
-// Вводим размерность массива
+    // Вводим размерность массива
 int[] GetArray(int sizeArray)
 // Метод, который получает на ввод размер массива и отдаёт заполненный рандомными числами массив
 {
@@ -14,14 +14,21 @@ int[] GetArray(int sizeArray)
     for(int i = 0; i< array.Length; i++)
     {
         array[i] = new Random().Next(-100,100);
-        if(i == 0) Console.Write($"[{array[i]},");
-        else if(i != array.Length - 1) Console.Write($"{array[i]},");
-        else Console.Write($"{array[i]}]");
     }
     return array;
 }
 
-void AmountNumber(int[] arr)
+void PrintArray(int[] arrPrint)
+{
+        for(int k = 0; k < arrPrint.Length; k++) 
+        {
+        if(k == 0) Console.Write($"[{ arrPrint[k]},");
+        else if(k !=  arrPrint.Length - 1) Console.Write($"{arrPrint[k]},");
+        else Console.Write($"{arrPrint[k]}]");
+        }
+}
+
+int AmountNumber(int[] arr)
 // Метод, который получает массив и определяет сумму элементов, стоящих на нечётных позициях.
 {
     int result = 0;
@@ -31,10 +38,10 @@ void AmountNumber(int[] arr)
         if(i % 2 != 0) result += arr[i];
         // Если остаток от деления на 2 индекса позиции не равен 0, то число не чётное.
     }
-    Console.WriteLine("");
-    Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях равна: {result} ");
+    return result;
 }
 
-int[] finalArray = GetArray(size);
-AmountNumber(finalArray);
-// Объявление метода
+PrintArray(GetArray(size));
+Console.WriteLine("");
+Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях равна: {AmountNumber(GetArray(size))}");
+// Объявление метода и вывод суммы элементов, стоящих на нечётных позициях
