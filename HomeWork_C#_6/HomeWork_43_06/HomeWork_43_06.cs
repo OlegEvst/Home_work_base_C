@@ -12,12 +12,11 @@ Console.WriteLine("Введите координату b2: ");
 Console.WriteLine("Введите координату k2: ");
     double fourNumber = double.Parse(Console.ReadLine());
 
-
 double[] GetNumber(double b1, double b2, double k1, double k2)
 {
     double x = 0;
     double y = 0;
-    if(b1 == k1) Console.WriteLine("Прямые c данными значениями паралельны");
+    if(b1 == k1) Console.WriteLine("Прямые c данными значениями паралельны!");
     else 
     {
     x = (b2 - b1)/(k1 - k2);
