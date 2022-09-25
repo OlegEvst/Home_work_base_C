@@ -53,7 +53,7 @@ void AverageNumber(int[,] average)
         {
              result += average[i, j];
         }
-        Console.Write($"{Math.Round(result / average.GetLength(0),2)}. "); 
+        Console.Write($"{Math.Round(result / average.GetLength(0),2)}; "); 
         }
 }
 
