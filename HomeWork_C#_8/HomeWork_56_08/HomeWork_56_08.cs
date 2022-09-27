@@ -40,13 +40,16 @@ void LineMin(int[,] minLine)
     }
         for (int i = 0; i < minLine.GetLength(0); i++)
         {
-            for (int j = 0; j < minLine.GetLength(1); j++) minTwoSum += minLine[i, j];
-            // Просуммируем все строки в двумерном массиве
+            for (int j = 0; j < minLine.GetLength(1); j++) 
+            {
+                minTwoSum += minLine[i, j];
+                // Просуммируем все строки в двумерном массиве
                 if (minTwoSum < minFirstSum)
                 {
                 minFirstSum = minTwoSum ;
                 minIndex = i;
                 }
+            }
                 // Если сумма строки меньше суммы первой строки, то ее принемаем за минимальную и так пробегаемся по всем [i,j]
                 minTwoSum = 0;
                 // Обнуляем сумму в конце каждого цикла [i,j]
