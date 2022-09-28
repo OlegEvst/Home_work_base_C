@@ -22,7 +22,7 @@ int[,] GetArray(int[,] matx)
     {
         for(int j = 0; j < matx.GetLength(1); j++)
         {
-            matx[i,j] = new Random().Next(-100,100);
+            matx[i,j] = new Random().Next(-10,10);
         }
     }
     return matx;
