@@ -40,8 +40,8 @@ int[,] DeleteArray(int[,] deleteArray)
             {
             if (deleteArray[a, a] < minValue)
                 {
-                minValue = deleteArray[a, a];
                 minIndex = a;
+                minValue = deleteArray[a, a];
                 }
             }
     int[,] newArray = new int[deleteArray.GetLength(0) - 1, deleteArray.GetLength(1) - 1];
